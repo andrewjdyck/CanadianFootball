@@ -1,0 +1,11 @@
+Package: CanadianFootball
+Title: R interface for cflstats.ca
+Version: 0.1
+Authors@R: "Andrew Dyck <andrew@andrewdyck.com> [aut, cre]"
+Description: A programming interface for the CFLStats.ca website. 
+Depends: R (>= 3.1.2)
+Imports:
+  jsonlite
+URL: http://www.github.com/andrewjdyck/CanadianFooball
+License: CC0
+LazyData: true
