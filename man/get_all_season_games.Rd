@@ -18,8 +18,8 @@ data.frame
 Returns games played by a CFL team in one season
 }
 \examples{
-\dontrun {
-# A games played in 2014
+\dontrun{
+# All games played in 2014
 get_all_season_games(2014)
 }
 }

@@ -40,8 +40,8 @@ get_team_season_games <- function(team, season) {
 #' @import jsonlite
 #' @keywords canadian football, CFL, cflstats
 #' @export
-#' @examples \dontrun {
-#' # A games played in 2014
+#' @examples \dontrun{
+#' # All games played in 2014
 #' get_all_season_games(2014)
 #' }
 
