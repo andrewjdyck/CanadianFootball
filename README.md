@@ -17,6 +17,7 @@ install_github('andrewjdyck/CanadianFootball)
 ```r
 # Get all games played by Calgary in the 2014 season
 CGY_2014 <- get_team_season_games('CGY', 2014)
+head(CGY_2014)
   GameId Year WeekNumber HomeTeam AwayTeam           StartTime HomeScore AwayScore    Type
 1 2014011 2014          1      CGY      MTL 2014-06-28T15:00:00        29         8 Regular
 2 2014020 2014          3      TOR      CGY 2014-07-12T18:30:00        15        34 Regular
