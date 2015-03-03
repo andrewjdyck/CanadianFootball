@@ -14,6 +14,8 @@ install_github('andrewjdyck/CanadianFootball)
 ```
 
 ## Usage ##
+
+### Download games for a team in a single season ###
 ```r
 # Get all games played by Calgary in the 2014 season
 CGY_2014 <- get_team_season_games('CGY', 2014)
@@ -27,12 +29,14 @@ head(CGY_2014)
 6 2014037 2014          7      CGY      ORB 2014-08-09T19:30:00        38        17 Regular
 ```
 
-
+### Download all games played in a single season ###
 ```r
 # Get all games played in the 2014 season
 games2014 <- get_all_season_games(2014)
+```
 
-# Calculate the Pythagorean Expectation for 2014 by team
+### Calculate the Pythagorean Expectation for 2014 by team ###
+```r
 season_py_exp <- do.call(
   'rbind', 
   lapply(
@@ -42,6 +46,7 @@ season_py_exp <- do.call(
 )
 ```
 
+### Plot pythagorean expectation by team ###
 ```r
 # Plot the Pythagorean Expectation throughout the 2014 season
 library(ggplot2)
@@ -49,6 +54,5 @@ ggplot(season_py_exp, aes(WeekNumber, PyExp, colour=Team)) +
   geom_line() +
   geom_point()
 ```
-
 ![Pythagorean Expectation 2014](https://raw.githubusercontent.com/andrewjdyck/CanadianFootball/master/PyExp2014.png)
 
