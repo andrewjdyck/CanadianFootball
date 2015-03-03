@@ -7,7 +7,7 @@
 #' @keywords canadian football, CFL, cflstats
 #' @export
 
-cfl_py_exp <- function(PointsFor, PointsAgainst, exponent=2.37) {
+pythagorean_expectation <- function(PointsFor, PointsAgainst, exponent=2.37) {
   py_exp <- PointsFor^exponent/(PointsFor^exponent + PointsAgainst^exponent)
   return(py_exp)
 }
