@@ -1,6 +1,6 @@
 #' Returns games played by a CFL team in one season
 #'
-#'These functions return games played in the CFL at a high level
+#' These functions return games played in the CFL at a high level
 #' @param team Abbreviated team name
 #' @param season The season of play
 #' @return data.frame
@@ -71,5 +71,5 @@ get_all_season_games <- function(season) {
     print('CFLSTATS ERROR: ', err)
     return(NULL)
   })
-  return(output)
+  return(output[order(output$GameId),])
 }

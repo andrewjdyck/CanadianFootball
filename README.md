@@ -26,3 +26,29 @@ head(CGY_2014)
 5 2014032 2014          6      CGY       BC 2014-08-01T22:00:00        24        25 Regular
 6 2014037 2014          7      CGY      ORB 2014-08-09T19:30:00        38        17 Regular
 ```
+
+
+```r
+# Get all games played in the 2014 season
+games2014 <- get_all_season_games(2014)
+
+# Calculate the Pythagorean Expectation for 2014 by team
+season_py_exp <- do.call(
+  'rbind', 
+  lapply(
+    unique(games2014$HomeTeam), 
+    function(x) single_team_py_exp(games2014[games2014$Type=='Regular',], x)
+  )
+)
+```
+
+```r
+# Plot the Pythagorean Expectation throughout the 2014 season
+library(ggplot2)
+ggplot(season_py_exp, aes(WeekNumber, PyExp, colour=Team)) +
+  geom_line() +
+  geom_point()
+```
+
+![Pythagorean Expectation 2014](https://raw.github.com/andrewjdyck/CanadianFootball/PyExp2014.png)
+
