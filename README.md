@@ -50,5 +50,5 @@ ggplot(season_py_exp, aes(WeekNumber, PyExp, colour=Team)) +
   geom_point()
 ```
 
-![Pythagorean Expectation 2014](https://raw.github.com/andrewjdyck/CanadianFootball/PyExp2014.png)
+![Pythagorean Expectation 2014](https://raw.githubusercontent.com/andrewjdyck/CanadianFootball/master/PyExp2014.png)
 
