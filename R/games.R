@@ -47,7 +47,7 @@ get_team_season_games <- function(team, season) {
 
 get_all_season_games <- function(season) {
   # Check that the seasons are valid
-  validSeasons <- 2009:2014
+  validSeasons <- 2009:2015
   if (is.element(season, validSeasons)==FALSE) {
     stop('Invalid season')
   }
