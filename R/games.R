@@ -14,7 +14,7 @@
 
 get_team_season_games <- function(team, season) {
   validTeams <- c('BC', "SSK", "CGY", "EDM", "WPG", "HAM", 'TOR', 'MTL', 'ORB')
-  validSeasons <- 2009:2014
+  validSeasons <- 2009:2015
   if (is.element(team, validTeams)==FALSE) {
     stop('Incorrect team name')
   }
