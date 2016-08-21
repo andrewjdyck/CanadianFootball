@@ -23,7 +23,7 @@ get_team_season_games <- function(team, season) {
   }
   url <- paste('http://www.cflstats.ca/team', '/', team, '/', season, '.json', sep='')                                        
   url_return <- tryCatch({
-    fromJSON(readLines(url, warn=FALSE))$Games
+    fromJSON(url, warn=FALSE)$Games
   }, error = function(err) {
     print(paste('CFLSTATS ERROR: ', err))
     return(NULL)
