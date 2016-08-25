@@ -21,9 +21,9 @@ get_team_season_games <- function(team, season) {
   if (is.element(season, validSeasons)==FALSE) {
     stop('Season data not available')
   }
-  url <- paste('http://www.cflstats.ca/team', '/', team, '/', season, '.json', sep='')                                        
+  url <- paste('http://cflstats.ca/team', '/', team, '/', season, '.json', sep='')                                        
   url_return <- tryCatch({
-    fromJSON(url, warn=FALSE)$Games
+    fromJSON(url)$Games
   }, error = function(err) {
     print(paste('CFLSTATS ERROR: ', err))
     return(NULL)
