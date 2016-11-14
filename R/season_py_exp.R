@@ -18,11 +18,11 @@ single_team_py_exp <- function(data, team) {
   temp$CumPointsAgainst <- cumsum(temp$PointsAgainst)
   temp$PyExp <- pythagorean_expectation(temp$CumPointsFor, temp$CumPointsAgainst)
   
-  #
-  temp$HomeWin <- ifelse(temp$HomeScore>temp$AwayScore, 1, 0)
-  temp$HomeTie <- ifelse(temp$HomeScore==temp$AwayScore, 1, 0)
+  # To calculate actual win percent
+  temp$HomeWin <- ifelse(temp$PointsFor>temp$PointsAgainst, 1, 0)
+  temp$HomeTie <- ifelse(temp$PointsFor==temp$PointsAgainst, 1, 0)
   temp$HomeLoss <- 1-temp$HomeWin
-  temp$tempPlayed <- cumsum(temp$HomeWin + temp$HomeLoss + temp$HomeTie)
+  temp$gamesPlayed <- cumsum(temp$HomeWin + temp$HomeLoss + temp$HomeTie)
   temp$CumWins <- cumsum(temp$HomeWin)
   temp$CumLosses <- cumsum(temp$HomeLoss)
   temp$CumTies <- cumsum(temp$HomeTie)

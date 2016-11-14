@@ -10,7 +10,7 @@ This package is designed as a programming interface to the CFLStats.ca API. The 
 ## Installation ##
 ```r
 library(devtools)
-install_github('andrewjdyck/CanadianFootball)
+install_github('andrewjdyck/CanadianFootball')
 ```
 
 ## Usage ##
